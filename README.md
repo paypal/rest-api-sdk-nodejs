@@ -36,12 +36,13 @@ To write an app using the SDK
     var paypal = require('paypal-rest-sdk');
     ```
   * Create config options, with parameters (mode, client_id, secret).
-
+  * to use an HTTPS proxy (like squid proxy) for all your requests, supply a proxy_url parameter with format `http://[<username>:<password>@]<ip>:<port>`. Example of a proxy url with basic auth: `http://myuser:mypasswordd@127.0.0.1:3128`
     ```js
     paypal.configure({
       'mode': 'sandbox', //sandbox or live
       'client_id': 'EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM',
-      'client_secret': 'EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM'
+      'client_secret': 'EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM',
+      'proxy_url': 'http://127.0.0.1:3128' // optional, only set it if you want to use a proxy
     });
     ```
   * For multiple configuration support, have a look at the [sample](/samples/configuration/multiple_config.js)
