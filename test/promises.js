@@ -59,16 +59,15 @@ describe('Promises', function () {
         require('./mocks/promises');
     }
 
-    it('uses promise style request', function (done) {
+    it('uses promise style request', function () {
         return paypal.payout.create(create_batch_payout_json).then(function (payout) {
             expect(payout.batch_header.payout_batch_id).to.not.equal(null);
             expect(payout.batch_header.sender_batch_header.sender_batch_id).to.equal(sender_batch_id);
             expect(payout.links).to.not.be.empty;
-            done();
         });
     });
 
-    it('joins requests with different clientIds and refreshing tokens without failing', function (done) {
+    it('joins requests with different clientIds and refreshing tokens without failing', function () {
         return Promise.all([
             paypal.payoutItem.get(payout_item_id1),
             paypal.payoutItem.get(payout_item_id2, {
@@ -78,7 +77,6 @@ describe('Promises', function () {
             paypal.payoutItem.get(payout_item_id3)
         ]).then(function (payoutItems) {
             expect(payoutItems).not.to.be.empty;
-            done();
         });
     });
 
