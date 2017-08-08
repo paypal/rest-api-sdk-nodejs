@@ -24,13 +24,14 @@
   },
   "main": "./index.js",
   "dependencies": {
-    "buffer-crc32": "^0.2.3",
-    "semver": "^5.0.3"
+    "buffer-crc32": "^0.2.13",
+    "semver": "^5.4.1",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "blanket": "~1.1.5",
     "chai": "~1.9.1",
-    "grunt": "~0.4.1",
+    "grunt": "^0.4.5",
     "grunt-contrib-jshint": "~0.3.0",
     "grunt-jsdoc": "^0.5.8",
     "grunt-simple-mocha": "~0.4.0",
