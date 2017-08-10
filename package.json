@@ -25,7 +25,8 @@
   "main": "./index.js",
   "dependencies": {
     "buffer-crc32": "^0.2.3",
-    "semver": "^5.0.3"
+    "semver": "^5.0.3",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "blanket": "~1.1.5",
@@ -47,7 +48,7 @@
     }
   },
   "scripts": {
-    "test": "grunt"
+    "test": "NODE_ENV=test grunt"
   },
   "readmeFilename": "README.md"
 }
