@@ -6,5 +6,6 @@ paypal.configure({
     'client_secret': 'EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM',
     'headers' : {
 		'custom': 'header'
-    }
+    },
+    retries: 3
 });
