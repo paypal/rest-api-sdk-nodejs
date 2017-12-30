@@ -22,7 +22,12 @@
     "node": ">=4"
   },
   "dependencies": {
-    "braintreehttp": "0.2.1"
+    "braintreehttp": "0.2.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-jsdoc": "^2.2.0",
+    "grunt-simple-mocha": "^0.4.1"
   },
   "devDependencies": {
     "chai": "^4.0.2",
