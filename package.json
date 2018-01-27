@@ -47,6 +47,7 @@
     "test:vaults": "mocha spec/vaults --recursive --timeout 60000",
     "test:paymentExperience": "mocha spec/paymentExperience --recursive --timeout 60000",
     "test:identity": "mocha spec/identity --recursive --timeout 60000",
+    "test:sync": "mocha spec/sync --recursive --timeout 60000",
     "test": "npm run test:unit"
   }
 }
