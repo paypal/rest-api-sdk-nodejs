@@ -8,26 +8,25 @@ This is a preview of how PayPal SDKs will look in the next major version. We've 
 const paypal = require('paypal-rest-sdk');
 const payments = paypal.v1.payments;
 
-let env = new paypal.core.SandboxEnvironment('AdV4d6nLHabWLyemrw4BKdO9LjcnioNIOgoz7vD611ObbDUL0kJQfzrdhXEBwnH8QmV-7XZjvjRWn0kg', 'EPKoPC_haZMTq5uM9WXuzoxUVdgzVqHyD5avCyVC1NCIUJeVaNNUZMnzduYIqrdw-carG9LBAizFGMyK');
-let client = new paypal.core.PayPalHttpClient(env);
+let env = new paypal.SandboxEnvironment('AdV4d6nLHabWLyemrw4BKdO9LjcnioNIOgoz7vD611ObbDUL0kJQfzrdhXEBwnH8QmV-7XZjvjRWn0kg', 'EPKoPC_haZMTq5uM9WXuzoxUVdgzVqHyD5avCyVC1NCIUJeVaNNUZMnzduYIqrdw-carG9LBAizFGMyK');
+let client = new paypal.PayPalHttpClient(env);
 
 let payment = {
-  "intent": "sale",
-  "transactions": [
-    "amount": {
-      "currency": "USD",
-      "amount": "10"
+  'intent': 'sale',
+  'transactions': [{
+    'amount': {
+      'currency': 'USD',
+      'amount': '10'
     }
-  ],
-  "redirect_urls": {
-    "cancel_url": "http://example.com/cancel",
-    "return_url": "http://example.com/return"
+  }],
+  'redirect_urls': {
+    'cancel_url': 'http://example.com/cancel',
+    'return_url': 'http://example.com/return'
   },
-  "payer": {
-    "payment_method": "paypal"
+  'payer': {
+    'payment_method': 'paypal'
   }
 };
-
 
 let request = new payments.PaymentCreateRequest();
 request.requestBody(payment);
