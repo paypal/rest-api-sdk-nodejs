@@ -16,6 +16,7 @@ paypal.configure({
 const paypal = require('paypal-rest-sdk');
 
 let env = new paypal.core.SandboxEnvironment('your_client_id', 'your_client_secret');
+// let env = new paypal.core.LiveEnvironment('your_client_id', 'your_client_secret'); // Live account
 let client = new paypal.core.PayPalHttpClient(env);
 ```
 
