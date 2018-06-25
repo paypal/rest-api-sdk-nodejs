@@ -24,21 +24,22 @@ if (process.env.NODE_ENV === 'production') {
 
 let client = new paypal.core.PayPalHttpClient(env);
 
-let payment = {
-  "intent": "sale",
-  "transactions": [
-    "amount": {
-      "currency": "USD",
-      "amount": "10"
-    }
+const payment = {
+  intent: 'sale',
+  transactions: [ {
+      amount: {
+          currency: 'USD',
+          total: '10.00',
+        },
+      },
   ],
-  "redirect_urls": {
-    "cancel_url": "http://example.com/cancel",
-    "return_url": "http://example.com/return"
+  redirect_urls: {
+    cancel_url: 'http://example.com/cancel',
+    return_url: 'http://example.com/return',
   },
-  "payer": {
-    "payment_method": "paypal"
-  }
+  payer: {
+    payment_method: 'paypal',
+  },
 };
 
 
