@@ -10,7 +10,7 @@ require('../../configure');
 // Note this sample is only for illustrative purposes. You must have a valid webhook configured with your
 // client ID and secret. This sample may not work due to other tests deleting and creating webhooks.
 
-// Normally, you would pass all the HTTP request headers sent in the Webhook Event, but creating a
+// Normally, you would pass all the HTTP request headers sent in the Webhook Event, by creating a
 // JSON object here for the sample.
 var certURL = "https://api.sandbox.paypal.com/v1/notifications/certs/CERT-360caa42-fca2a594-a5cafa77";
 var transmissionId = "103e3700-8b0c-11e6-8695-6b62a8a99ac4";
