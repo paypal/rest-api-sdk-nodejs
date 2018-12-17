@@ -28,8 +28,18 @@
     "semver": "^5.0.3"
   },
   "devDependencies": {
+    "@types/eslint": "^4.16.4",
+    "acorn": "^6.0.4",
     "blanket": "~1.1.5",
     "chai": "~1.9.1",
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-import-resolver-node": "^0.3.2",
+    "eslint-plugin-dependencies": "^2.4.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.3.0",
     "grunt-jsdoc": "^0.5.8",
@@ -47,7 +57,8 @@
     }
   },
   "scripts": {
-    "test": "grunt"
+    "test": "npx grunt",
+    "lint": "npx eslint ./lib --fix"
   },
   "readmeFilename": "README.md"
 }
