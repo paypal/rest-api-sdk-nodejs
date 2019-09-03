@@ -26,12 +26,12 @@ let client = new paypal.core.PayPalHttpClient(env);
 
 let payment = {
   "intent": "sale",
-  "transactions": [
+  "transactions": [{
     "amount": {
       "currency": "USD",
-      "amount": "10"
+      "total": "10"
     }
-  ],
+  }],
   "redirect_urls": {
     "cancel_url": "http://example.com/cancel",
     "return_url": "http://example.com/return"
