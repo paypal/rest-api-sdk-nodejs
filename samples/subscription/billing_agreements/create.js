@@ -11,7 +11,7 @@ var url = require('url');
 
 var isoDate = new Date();
 isoDate.setSeconds(isoDate.getSeconds() + 4);
-isoDate.toISOString().slice(0, 19) + 'Z';
+isoDate = isoDate.toISOString().slice(0, 19) + 'Z';
 
 var billingPlanAttributes = {
     "description": "Create Plan for Regular",
